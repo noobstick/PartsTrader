@@ -2,11 +2,16 @@ import React from 'react';
 
 export default class TradePost extends React.Component{
     render(){
-        const name = this.props.name;
+        const trade = this.props.trade;
         return (
-            <button class="trade">
-                {name}
-            </button>
+            <div className="trade-container">
+                <div className="trade-img">
+                    <img src={trade.image} />
+                </div>
+                <div className="trade-link">
+                    <a title={trade.name} href={trade.url}>{trade.name}</a>
+                </div>
+            </div>
         )
     }
 }

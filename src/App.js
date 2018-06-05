@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <Example />
-        <div className="title">Trades</div>
+        <div className="trade-title">Trades</div>
         <TradePanel posts='16'/>
       </div>
     );
