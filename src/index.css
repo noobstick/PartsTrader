@@ -18,6 +18,10 @@ a {
   text-align: center;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .trade-title {
   margin: 0.5em 1% 20px 1%;
   color: #343a40;
