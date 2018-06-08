@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
-import Example from './Example';
-import logo from './logo.svg';
+import NavBar from './NavBar';
 import './App.css';
 import TradePanel from './TradePanel';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom';
+import LoginPage from './LoginPage';
+import ProfilePage from './ProfilePage';
+import MarketPage from './MarketPage';
+import RouteConfig from './RouteConfig';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Example />
-        <div className="trade-title">Trades</div>
-        <TradePanel posts='16'/>
+        <RouteConfig />
       </div>
     );
   }
