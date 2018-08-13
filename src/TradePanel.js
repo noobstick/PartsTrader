@@ -1,18 +1,6 @@
 import React from 'react';
 import TradePost from './TradePost';
-// import {
-//   Collapse,
-//   Navbar,
-//   NavbarToggler,
-//   NavbarBrand,
-//   Nav,
-//   NavItem,
-//   NavLink,
-//   UncontrolledDropdown,
-//   DropdownToggle,
-//   DropdownMenu,
-//   DropdownItem
-// } from 'reactstrap';
+import TradeCreateModal from './TradeCreateModal';
 
 export default class TradePanel extends React.Component {
   createData() {
@@ -100,10 +88,15 @@ export default class TradePanel extends React.Component {
     const data = this.createData();
     const trades = data.trades;
     return (
-      <div className="tradePanel-container">
-        <section className="box">
-          {this.createPosts(trades)}
-        </section>
+      <div>
+        <div>
+          <TradeCreateModal />
+        </div>
+        <div className="tradePanel-container">
+          <section className="box">
+            {this.createPosts(trades)}
+          </section>
+        </div>
       </div>
     );
   }

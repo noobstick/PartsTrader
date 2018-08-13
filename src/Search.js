@@ -1,4 +1,5 @@
 import React from 'react';
+import TradeService from './Service/TradeService';
 
 export default class Search extends React.Component {
     constructor() {
@@ -10,6 +11,7 @@ export default class Search extends React.Component {
 
         this.onSearchInputChange = this.onSearchInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.tradeService = new TradeService();
     }
 
     onSearchInputChange(event){
@@ -18,9 +20,14 @@ export default class Search extends React.Component {
         });
         console.log(this.state.searchText);
     }
+
+    consoleLog(data){
+        console.log(data);
+    }
     
     handleSubmit(event) {
         alert('Search for the following product: ' + this.state.searchText);
+        this.tradeService.createTrade(this.consoleLog);
         event.preventDefault();
     }
 
